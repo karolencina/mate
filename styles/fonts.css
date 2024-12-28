@@ -1,0 +1,18 @@
+:root {
+  --azeret-mono-size: 1.25em;
+  --pixelify-sans-ratio: 1.13;
+}
+
+.font-common {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.pixelify-sans {
+  font-size: calc(var(--azeret-mono-size) * var(--pixelify-sans-ratio));
+}
+
+.azeret-mono {
+  font-size: var(--azeret-mono-size);
+  font-weight: 500;
+}
