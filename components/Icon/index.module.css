@@ -1,0 +1,15 @@
+.icon-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.icon {
+  width: 60px;
+  height: 60px;
+  transition: filter 0.3s ease;
+  filter: brightness(0.7);
+}
+
+.icon:hover {
+  filter: brightness(2);
+}

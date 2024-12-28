@@ -3,5 +3,10 @@
   color: var(--primary);
   padding: 10px 20px;
   border-radius: none;
+  border: none;
   cursor: pointer;
+}
+
+.button:hover {
+  color: var(--foreground);
 }

@@ -9,7 +9,8 @@ type Story = StoryObj<typeof Text>;
 
 export const Default: Story = {
   args: {
-    children: "SOME EXAMPLE TEXT",
+    children:
+      "Some example text... I'm also wondering if this could be a paragraph and I will need to capitalise it actually now that I'm thinking about it. Damn I really hope this can be done by today!!",
   },
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import Button from "@components/Button";
 import "../../styles/colours.css";
 
@@ -11,7 +12,8 @@ type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
   args: {
-    children: "Text",
+    children: "Some example text...",
+    onClick: action("clicked"),
   },
 };
 

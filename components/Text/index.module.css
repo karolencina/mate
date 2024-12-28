@@ -1,0 +1,7 @@
+.text {
+  font-size: 2rem; /* Adjust as needed */
+  text-align: center; /* Center the text */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: inline-block; /* Ensure it aligns well within parent elements */
+}
