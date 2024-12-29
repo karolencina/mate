@@ -56,6 +56,7 @@ const Text: React.FC<TextProps> = ({ children, className }) => {
       const props = node.props as { children?: React.ReactNode };
       return React.cloneElement(node, {
         ...props,
+        // @ts-ignore
         children: React.Children.map(props.children, processNode),
       });
     }
