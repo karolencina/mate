@@ -1,8 +1,8 @@
 .icon-container {
   display: grid;
   place-items: center;
-  height: 100vh;
 }
+
 .icon {
   width: 60px;
   height: 60px;

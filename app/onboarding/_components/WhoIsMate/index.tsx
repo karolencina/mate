@@ -8,10 +8,6 @@ type WhoIsMateProps = {
 };
 
 const WhoIsMate = ({ onNext }: WhoIsMateProps) => {
-  const handleClick = () => {
-    console.log("Clicked");
-  };
-
   return (
     <div className={styles.page}>
       <h1>

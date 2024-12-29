@@ -1,7 +1,78 @@
 .page {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  padding: 100px;
+  height: 100vh; /* Ensure the page fills the full viewport height */
+  gap: 3rem;
 }
+
+.top-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.img {
+  max-width: 100%;
+  width: 442px;
+  height: auto;
+}
+
+.top-text {
+  width: 100%;
+}
+
+.bottom-text {
+  width: 100%;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin-left: 50px;
+}
+/* 
+
+
+
+.bottom-text {
+  grid-column: 1 / 3;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+
+
+
+
+*/

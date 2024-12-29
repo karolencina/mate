@@ -21,12 +21,16 @@ const Text: React.FC<TextProps> = ({ children, className }) => {
     "o",
     "P",
     "p",
+    "Q",
+    "q",
     "S",
     "s",
     "V",
     "v",
     "W",
     "w",
+    "(",
+    ")",
   ]);
 
   const processNode = (node: React.ReactNode): React.ReactNode => {

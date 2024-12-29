@@ -1,0 +1,19 @@
+.mobile-message {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: var(--primary);
+  margin: auto;
+  height: 100vh;
+  padding: 30px;
+  gap: 4rem;
+}
+
+@media (max-width: 1024px) {
+  .mobile-message {
+    display: flex;
+  }
+}
