@@ -1,7 +1,10 @@
+/* This is the global CSS file which is currently being used... Next step is to change it to be the global CSS file from the /public folder */
+
 :root {
   --background: #000000;
   --foreground: #ffffff;
   --primary: #689fc8;
+  --secondary: #808080;
 }
 
 @media (prefers-color-scheme: dark) {

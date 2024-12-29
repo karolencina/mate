@@ -2,6 +2,7 @@
   --background: #000000;
   --foreground: #ffffff;
   --primary: #689fc8;
+  --secondary: #808080;
 }
 
 @media (prefers-color-scheme: dark) {

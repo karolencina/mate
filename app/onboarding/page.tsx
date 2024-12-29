@@ -3,10 +3,11 @@
 import { useState } from "react";
 import WhoIsMate from "./_components/WhoIsMate";
 import JinnSpirit from "./_components/JinnSpirit";
+import MateSpirit from "./_components/MateSpirit";
 import styles from "./page.module.css";
 import clx from "classnames";
 
-const components = [WhoIsMate, JinnSpirit];
+const components = [WhoIsMate, JinnSpirit, MateSpirit];
 
 const Onboarding = () => {
   const [currentStep, setCurrentStep] = useState(0);
