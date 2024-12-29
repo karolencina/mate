@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./index.module.css";
 import clx from "classnames";
 import Text from "../Text";
