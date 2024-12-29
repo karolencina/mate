@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 import WhoIsMate from "./_components/WhoIsMate";
 import JinnSpirit from "./_components/JinnSpirit";
@@ -15,8 +14,6 @@ const Onboarding = () => {
   const handleNextStep = () => {
     setCurrentStep((prevStep) => prevStep + 1);
   };
-
-  const CurrentStep = components[currentStep];
 
   return (
     <div className={styles.container}>

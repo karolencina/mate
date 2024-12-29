@@ -1,4 +1,3 @@
-import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import Icon from "@components/Icon";
 import "../../styles/colours.css";
