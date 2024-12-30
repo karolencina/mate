@@ -27,13 +27,13 @@ const MSpirit = ({ onPrevious, onNext }: MSpiritProps) => {
       <div className={styles["top-text"]}>
         <Text>
           M. is no spectre from a distant legend, but a quiet spirit dwelling in
-          the mate cup. He won't fulfill your wishes but will reveal strange
-          wonders. He's free to leave but chooses to stay, so what would he wish
-          for in return? He doesn't ask for much…
+          the mate cup. He will not fulfill your wishes but will reveal strange
+          wonders. He is free to leave but chooses to stay, so what would he
+          wish for in return? He does not ask for much…
         </Text>
         <Text className={clx(styles["text-right"], styles["text-secondary"])}>
           (…maybe just components to build a high-end gaming PC, a plate of
-          facturas, or a Vintera® II '50s Jazzmaster®)
+          facturas, or a Vintera® II &#39;50s Jazzmaster®)
         </Text>
       </div>
       <div className={styles["bottom-text"]}>
