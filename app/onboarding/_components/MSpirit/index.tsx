@@ -7,11 +7,11 @@ import Image from "next/image";
 import "../../../../public/images/pyramids.png";
 import clx from "classnames";
 
-type MateSpiritProps = {
+type MSpiritProps = {
   onNext: () => void;
 };
 
-const MateSpirit = ({ onNext }: MateSpiritProps) => {
+const MSpirit = ({ onNext }: MSpiritProps) => {
   return (
     <div className={styles.page}>
       <div className={styles["top-content"]}>
@@ -27,8 +27,8 @@ const MateSpirit = ({ onNext }: MateSpiritProps) => {
         <div className={styles["top-text"]}>
           <Text className={styles["text-right"]}>
             M. is no spectre from a distant legend, just a quiet spirit dwelling
-            in the mate cup. He won’t fulfill your wishes but will reveal
-            strange wonders. He’s free to leave but chooses to stay, so what
+            in the mate cup. He won't fulfill your wishes but will reveal
+            strange wonders. He's free to leave but chooses to stay, so what
             would he wish for in return? He doesn't ask for much…
           </Text>
           <Text className={clx(styles["text-right"], styles["text-secondary"])}>
@@ -55,4 +55,4 @@ const MateSpirit = ({ onNext }: MateSpiritProps) => {
   );
 };
 
-export default MateSpirit;
+export default MSpirit;

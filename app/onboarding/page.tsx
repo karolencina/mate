@@ -3,7 +3,7 @@
 import { useState } from "react";
 import WhoIsMate from "./_components/WhoIsMate";
 import JinnSpirit from "./_components/JinnSpirit";
-import MateSpirit from "./_components/MateSpirit";
+import MateSpirit from "./_components/MSpirit";
 import styles from "./page.module.css";
 import clx from "classnames";
 
