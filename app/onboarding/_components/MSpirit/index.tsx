@@ -4,19 +4,20 @@ import React from "react";
 import Button from "@/components/Button";
 import Icon from "@/components/Icon";
 import Image from "next/image";
-import "../../../../public/images/smoke.png";
+import "../../../../public/images/pyramids.png";
+import clx from "classnames";
 
-type JinnSpiritProps = {
+type MSpiritProps = {
   onPrevious: () => void;
   onNext: () => void;
 };
 
-const JinnSpirit = ({ onPrevious, onNext }: JinnSpiritProps) => {
+const MSpirit = ({ onPrevious, onNext }: MSpiritProps) => {
   return (
     <div className={styles.page}>
       <div className={styles["img-container"]}>
         <Image
-          src={"/images/smoke.png"}
+          src={"/images/pyramids.png"}
           alt={"Smoke"}
           className={styles.img}
           width={2280}
@@ -25,17 +26,21 @@ const JinnSpirit = ({ onPrevious, onNext }: JinnSpiritProps) => {
       </div>
       <div className={styles["top-text"]}>
         <Text>
-          Before I tell you about M, let me ask you - Do you know of the energy
-          beings made of smokeless fire, bound to the magic lamp? They are said
-          to grant wishes in return for freedom.
+          M. is no spectre from a distant legend, but a quiet spirit dwelling in
+          the mate cup. He will not fulfill your wishes but will reveal strange
+          wonders. He is free to leave but chooses to stay, so what would he
+          wish for in return? He does not ask for much…
+        </Text>
+        <Text className={clx(styles["text-right"], styles["text-secondary"])}>
+          (…maybe just components to build a high-end gaming PC, a plate of
+          facturas, or a Vintera® II &#39;50s Jazzmaster®)
         </Text>
       </div>
       <div className={styles["bottom-text"]}>
-        <Text>
-          Yet What is freedom for these entities? Can we truly set them free, or
-          does their nature bind them to something mysterious beyond our
-          understanding? Perhaps their actions conceal deeper mischief or A
-          quiet desire for vengeance.
+        <Text className={styles["text-left"]}>
+          He waits with eternal patience to be summoned only by the curious
+          mind, ready to reveal the wonders he conceals. What will you ask of
+          him today?
         </Text>
       </div>
       <div className={styles["button-container"]}>
@@ -50,4 +55,4 @@ const JinnSpirit = ({ onPrevious, onNext }: JinnSpiritProps) => {
   );
 };
 
-export default JinnSpirit;
+export default MSpirit;

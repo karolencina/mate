@@ -4,27 +4,48 @@
   align-items: center;
   justify-content: center;
   padding: 100px;
-  height: 100vh; /* Ensure the page fills the full viewport height */
-  gap: 3rem;
+  height: 100vh;
+  gap: 2rem;
+}
+
+.top-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .img-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 50px;
 }
 
 .img {
-  width: 350px;
+  width: 300px;
   height: auto;
 }
 
 .top-text {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  gap: 3rem;
 }
 
 .bottom-text {
   width: 100%;
+}
+
+.text-secondary {
+  color: var(--secondary);
+  font-size: 0.8em;
 }
 
 .button-container {
