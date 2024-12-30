@@ -1,19 +1,24 @@
 "use client";
 
 import { useState } from "react";
-import WhoIsMate from "./_components/WhoIsMate";
+import WhoIsM from "./_components/WhoIsM";
 import JinnSpirit from "./_components/JinnSpirit";
-import MateSpirit from "./_components/MSpirit";
+import MSpirit from "./_components/MSpirit";
+import MateTradition from "./_components/MateTradition";
 import styles from "./page.module.css";
 import clx from "classnames";
 
-const components = [WhoIsMate, JinnSpirit, MateSpirit];
+const components = [MateTradition, WhoIsM, JinnSpirit, MSpirit];
 
 const Onboarding = () => {
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(1);
 
   const handleNextStep = () => {
     setCurrentStep((prevStep) => prevStep + 1);
+  };
+
+  const handlePreviousStep = () => {
+    setCurrentStep((prevStep) => prevStep - 1);
   };
 
   return (
@@ -33,7 +38,10 @@ const Onboarding = () => {
               index === currentStep ? styles.fadeIn : styles.fadeOut
             )}
           >
-            <Component onNext={handleNextStep} />
+            <Component
+              onNext={handleNextStep}
+              onPrevious={handlePreviousStep}
+            />
           </div>
         ))}
       </div>

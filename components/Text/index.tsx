@@ -31,6 +31,7 @@ const Text: React.FC<TextProps> = ({ children, className }) => {
     "w",
     "(",
     ")",
+    "?",
   ]);
 
   const processNode = (node: React.ReactNode): React.ReactNode => {

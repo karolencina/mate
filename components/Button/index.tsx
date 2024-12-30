@@ -10,7 +10,7 @@ type ButtonProps = {
 const Button: React.FC<ButtonProps> = ({ children, className, onClick }) => {
   return (
     <button className={clx(styles.button, className)} onClick={onClick}>
-      <Text>{children}</Text>
+      <Text className={styles.text}>{children}</Text>
     </button>
   );
 };
