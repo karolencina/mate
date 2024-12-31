@@ -22,8 +22,7 @@
 
 .btn-close {
   position: absolute;
-  top: 100px;
-  right: 100px;
-
+  top: 50px;
+  right: 50px;
   cursor: pointer;
 }
