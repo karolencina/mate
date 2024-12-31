@@ -21,18 +21,3 @@ export default function App() {
 
   return <div>App Component</div>;
 }
-
-// export default function Home() {
-//   return (
-//     <div className={styles.page}>
-//       <div className="image-container">
-//         <Image
-//           src="/images/mate.png"
-//           alt="Mate Gourd"
-//           layout={"fill"}
-//           objectFit={"contain"}
-//         />
-//       </div>
-//     </div>
-//   );
-// }

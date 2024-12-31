@@ -1,42 +1,43 @@
 import Modal from "@/components/Modal";
 import Text from "@/components/Text";
 import React, { useEffect, useState } from "react";
+import db from "../../../data/db";
+import { useSettings } from "../../../context/SettingsContext";
 
 type InfoModalProps = {
   onClose: () => void;
 };
 
 type InfoData = {
-  text: string;
+  value: string;
   isNSFW: boolean;
 };
 
-const fakeApiData: InfoData[] = [
-  { text: "Info 1: Lorem ipsum dolor sit amet.", isNSFW: false },
-  { text: "Info 2: Consectetur adipiscing elit.", isNSFW: true },
-  { text: "Info 3: Integer nec odio.", isNSFW: false },
-  { text: "Info 4: Praesent libero.", isNSFW: true },
-  { text: "Info 5: Sed cursus ante dapibus diam.", isNSFW: false },
-];
-
+// Randomly selects an item from the `db`
 const getRandomInfo = (): InfoData => {
-  const randomIndex = Math.floor(Math.random() * fakeApiData.length);
-  return fakeApiData[randomIndex];
+  const index = Math.floor(Math.random() * db.length);
+  return db[index];
 };
 
 const InfoModal = ({ onClose }: InfoModalProps) => {
   const [info, setInfo] = useState<InfoData | null>(null);
+  const { showNSFW } = useSettings(); // Access global settings context
 
+  // Set a random fact when the modal is rendered
   useEffect(() => {
     setInfo(getRandomInfo());
   }, []);
 
   if (!info) return null;
 
+  // Don't show NSFW content if the setting is false
+  if (info.isNSFW && !showNSFW) {
+    return null; // Simply don't render NSFW facts if global setting is 'No'
+  }
+
   return (
     <Modal isVisible={true} onClose={onClose}>
-      <Text>{info.text}</Text>
-      {info.isNSFW && <Text style={{ color: "red" }}>NSFW Content</Text>}
+      <Text>{info.value}</Text>
     </Modal>
   );
 };

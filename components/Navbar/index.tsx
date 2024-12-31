@@ -58,6 +58,9 @@ const Navbar = () => {
           />
         </Button>
       </div>
+      <Button onClick={() => {}}>
+        <Icon name="question_mark" className={styles.icon} />
+      </Button>
     </nav>
   );
 };
