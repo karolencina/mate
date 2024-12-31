@@ -18,21 +18,3 @@
   width: 300px;
   height: auto;
 }
-
-.top-text {
-  width: 100%;
-}
-
-.bottom-text {
-  width: 100%;
-}
-
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.prev {
-  transform: rotate(180deg);
-}

@@ -7,9 +7,10 @@ import styles from "./index.module.css";
 type TextProps = {
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 };
 
-const Text: React.FC<TextProps> = ({ children, className }) => {
+const Text: React.FC<TextProps> = ({ children, className, style }) => {
   const pixelLetters = new Set([
     "B",
     "b",
@@ -66,7 +67,7 @@ const Text: React.FC<TextProps> = ({ children, className }) => {
   };
 
   return (
-    <span className={clx("font-common", className, styles.text)}>
+    <span className={clx("font-common", className, styles.text)} style={style}>
       {React.Children.map(children, processNode)}
     </span>
   );

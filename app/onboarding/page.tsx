@@ -1,21 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import WhoIsM from "./_components/WhoIsM";
 import JinnSpirit from "./_components/JinnSpirit";
 import MSpirit from "./_components/MSpirit";
 import MateTradition from "./_components/MateTradition";
 import styles from "./page.module.css";
 import clx from "classnames";
+import Instructions from "./_components/Instructions";
 
-const components = [MateTradition, WhoIsM, JinnSpirit, MSpirit];
+const components = [MateTradition, WhoIsM, JinnSpirit, MSpirit, Instructions];
 
 const Onboarding = () => {
   const [currentStep, setCurrentStep] = useState(1);
+  const router = useRouter();
 
   const handleNextStep = () => {
-    setCurrentStep((prevStep) => prevStep + 1);
+    if (currentStep === components.length - 1) {
+      localStorage.setItem("onboarded", "true");
+      router.push("/home");
+    } else {
+      setCurrentStep((prevStep) => prevStep + 1);
+    }
   };
+
+  useEffect(() => {
+    console.log("Current Step:", currentStep);
+  }, [currentStep]);
 
   const handlePreviousStep = () => {
     setCurrentStep((prevStep) => prevStep - 1);
