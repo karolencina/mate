@@ -24,16 +24,6 @@
   gap: 100px;
 }
 
-.saveButton {
-  align-self: flex-start;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  bottom: 0;
-  right: 0;
-  border: 2px solid var(--primary);
-}
-
 .selectionGroup {
   display: flex;
   gap: 10px;

@@ -1,16 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./index.module.css";
 import Text from "@/components/Text";
 import Button from "@/components/Button";
+import { useSettings } from "../context/SettingsContext"; // Import the context hook
 
 const Settings = () => {
-  const [showNSFW, setShowNSFW] = useState(false);
+  // Get the global state and setter function
+  const { showNSFW, setShowNSFW } = useSettings();
 
-  const handleSave = () => {
-    // Handle save logic here
-    console.log("Settings saved:", { showNSFW });
+  const [localShowNSFW, setLocalShowNSFW] = useState(showNSFW); // Local state to sync UI
+
+  useEffect(() => {
+    setLocalShowNSFW(showNSFW);
+    console.log("Current global showNSFW setting:", showNSFW); // Log current global setting
+  }, [showNSFW]);
+
+  const handleClick = (value: boolean) => {
+    setLocalShowNSFW(value);
+    setShowNSFW(value); // Save the updated value to the global context immediately
+    console.log("Settings updated:", { showNSFW: value }); // Log updated settings
   };
 
   return (
@@ -24,27 +34,23 @@ const Settings = () => {
           <div className={styles.selectionGroup}>
             <span
               className={`${styles.selection} ${
-                showNSFW ? "" : styles.inactive
+                !localShowNSFW ? "" : styles.inactive
               }`}
-              onClick={() => setShowNSFW(true)}
+              onClick={() => handleClick(false)} // Update local state
             >
               <Text className={styles.optionsText}>No</Text>
             </span>
             <span
               className={`${styles.selection} ${
-                !showNSFW ? "" : styles.inactive
+                localShowNSFW ? "" : styles.inactive
               }`}
-              onClick={() => setShowNSFW(false)}
+              onClick={() => handleClick(true)} // Update local state
             >
               <Text className={styles.optionsText}>Yes</Text>
             </span>
           </div>
         </div>
       </div>
-
-      <Button className={styles.saveButton} onClick={handleSave}>
-        Save
-      </Button>
     </div>
   );
 };
