@@ -51,6 +51,12 @@
   transition: transform 0.3s ease;
 }
 
-.left {
+.iconInfo {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.right {
   transform: rotate(180deg);
 }
