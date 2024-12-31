@@ -1,0 +1,62 @@
+.settingsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 45 50 0 250;
+  gap: 2.5rem;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 2em;
+  text-align: left;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.saveButton {
+  align-self: flex-start;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+
+  bottom: 0;
+  right: 0;
+
+  border: 2px solid var(--primary);
+}
+
+.selectionGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.optionsText {
+  font-size: 1.2em;
+  color: var(--primary);
+}
+
+.selection {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.selection.inactive {
+  filter: brightness(0.3);
+  transition: filter 0.3s ease;
+}
+
+.selection.inactive:hover {
+  filter: brightness(1);
+}

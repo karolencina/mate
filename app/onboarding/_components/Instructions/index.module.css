@@ -19,14 +19,6 @@
   height: auto;
 }
 
-.top-text {
-  width: 100%;
-}
-
-.bottom-text {
-  width: 100%;
-}
-
 .button-container {
   display: flex;
   justify-content: space-between;
@@ -35,4 +27,8 @@
 
 .prev {
   transform: rotate(180deg);
+}
+
+.btn {
+  font-size: 1.5rem;
 }

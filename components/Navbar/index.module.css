@@ -1,0 +1,56 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  align-items: center;
+  padding: 50px;
+
+  color: #fff;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s ease;
+  margin-top: 100px;
+}
+
+.menu.open {
+  transform: translateX(0);
+}
+
+.menu.closed {
+  transform: translateX(-150%);
+}
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.icon {
+  transition: transform 0.3s ease;
+  width: 60px;
+  height: auto;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.left {
+  transform: rotate(180deg);
+}

@@ -6,11 +6,19 @@ type ButtonProps = {
   onClick: () => void;
   className?: string;
   children: React.ReactNode;
+  fontSize?: string;
 };
-const Button: React.FC<ButtonProps> = ({ children, className, onClick }) => {
+const Button: React.FC<ButtonProps> = ({
+  children,
+  className,
+  onClick,
+  fontSize,
+}) => {
   return (
     <button className={clx(styles.button, className)} onClick={onClick}>
-      <Text className={styles.text}>{children}</Text>
+      <Text className={styles.text} style={{ fontSize }}>
+        {children}
+      </Text>
     </button>
   );
 };

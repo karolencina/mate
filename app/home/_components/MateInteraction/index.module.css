@@ -1,0 +1,30 @@
+/* MateInteraction.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.imageWrapper {
+  display: inline-block;
+  cursor: grab; /* Indicates the element can be dragged */
+}
+
+.img {
+  width: 100%; /* Scale image to fit */
+  max-width: 300px; /* Maximum width for the image */
+  height: auto;
+  transition: transform 0.1s ease-in-out; /* Smooth transition for rotation */
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+}

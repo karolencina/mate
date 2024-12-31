@@ -12,10 +12,18 @@ type WhoIsMProps = {
 const WhoIsM = ({ onPrevious, onNext }: WhoIsMProps) => {
   return (
     <div className={styles.page}>
-      <Button onClick={onPrevious} className={clx(styles.btn, styles.mate)}>
+      <Button
+        fontSize="2rem"
+        onClick={onPrevious}
+        className={clx(styles.btn, styles.mate)}
+      >
         What is <span className={styles["text-blue"]}>Mate</span>?
       </Button>
-      <Button onClick={onNext} className={clx(styles.btn, styles.m)}>
+      <Button
+        fontSize="2rem"
+        onClick={onNext}
+        className={clx(styles.btn, styles.m)}
+      >
         Who is M?
       </Button>
     </div>
