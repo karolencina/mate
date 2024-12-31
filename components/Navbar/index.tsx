@@ -77,21 +77,21 @@ const Navbar = () => {
       </nav>
       <Modal isVisible={isModalVisible} onClose={toggleModal}>
         <Text style={{ marginBottom: "3em" }}>
-          If you're not Mathias, ignore. If you're Mathias, read on.
+          If you&apos;re not Mathias, ignore. If you&apos;re Mathias, read on.
         </Text>
         <Text>
-          Hi Matesito. If it's you reading this, I've been working on this
-          project for about 9 months (basically pregnancy). It started as an
-          andorid project - I looked up how easy it was to publish android apps
-          on Google Play and found out that I basically didn't need much, just
-          pay a tenner and have the app pass the security. So I started
-          developing it in React Native. I was this 🤏 close to publishing it.
-          Little did I know. After the app was developed, I uploaded it to their
-          platform just to find out that the most recent requirement is having
-          20 testers, testing the app for 14 consqecutive days. Obv, impossible
-          for a solo mini smol dev. So I decided to make a web version of it. I
-          love you and I hope you can see yourself in the M character. I love
-          you.
+          Hi Matesito. If it&apos;s you reading this, I&apos;ve been working on
+          this project for about 9 months (basically pregnancy). It started as
+          an android project - I looked up how easy it was to publish android
+          apps on Google Play and found out that I basically didn&apos;t need
+          much, just pay a tenner and have the app pass the security. So I
+          started developing it in React Native. I was this 🤏 close to
+          publishing it. Little did I know. After the app was developed, I
+          uploaded it to their platform just to find out that the most recent
+          requirement is having 20 testers, testing the app for 14 consecutive
+          days. Obv, impossible for a solo mini smol dev. So I decided to make a
+          web version of it. I love you and I hope you can see yourself in the M
+          character. I love you.
         </Text>
       </Modal>
     </>
